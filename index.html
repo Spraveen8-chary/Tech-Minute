@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>TechMinute</title>
+
+  <style>
+    body{
+      margin:0;
+      height:100vh;
+      display:flex;
+      justify-content:center;
+      align-items:center;
+      background:#111;
+      font-family:Arial;
+    }
+
+    .box{
+      text-align:center;
+      background:#1e1e1e;
+      padding:40px;
+      border-radius:20px;
+      box-shadow:0 0 20px rgba(255,0,0,0.3);
+    }
+
+    h1{
+      color:white;
+      margin-bottom:30px;
+    }
+
+    button{
+      padding:15px 30px;
+      margin:10px;
+      border:none;
+      border-radius:10px;
+      font-size:18px;
+      cursor:pointer;
+      transition:0.3s;
+    }
+
+    .subscribe{
+      background:red;
+      color:white;
+    }
+
+    .subscribe:hover{
+      background:darkred;
+      transform:scale(1.05);
+    }
+
+    .visit{
+      background:white;
+      color:black;
+    }
+
+    .visit:hover{
+      transform:scale(1.05);
+    }
+
+  </style>
+</head>
+<body>
+
+  <div class="box">
+    <h1>Welcome to TechMinute</h1>
+
+    <button class="subscribe" onclick="subscribeChannel()">
+      Subscribe Now
+    </button>
+
+    <button class="visit" onclick="visitChannel()">
+      Visit Channel
+    </button>
+  </div>
+
+  <script>
+
+    function subscribeChannel(){
+      const width = 600;
+      const height = 600;
+      const left = (window.innerWidth / 2) - (width / 2);
+      const top = (window.innerHeight / 2) - (height / 2);
+      
+      window.open(
+        "https://www.youtube.com/@techminute-q6g?sub_confirmation=1",
+        "Subscribe",
+        `width=${width},height=${height},top=${top},left=${left},scrollbars=yes,resizable=yes`
+      );
+    }
+
+    function visitChannel(){
+      window.open(
+        "https://www.youtube.com/@techminute-q6g",
+        "_blank"
+      );
+    }
+
+  </script>
+
+</body>
+</html>
